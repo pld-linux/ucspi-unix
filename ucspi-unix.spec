@@ -32,11 +32,13 @@ make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_OPT_FLAGS -s"
 rm -fr $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT
 make install_prefix=$RPM_BUILD_ROOT install
+gzip -9nf COPYING ChangeLog NEWS PROTOCOL README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+
 %files
 %defattr(-,root,root)
-%doc COPYING ChangeLog NEWS PROTOCOL README TODO
+%doc COPYING.gz ChangeLog.gz NEWS.gz PROTOCOL.gz README.gz TODO.gz
 /usr/bin/*

@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://untroubled.org/ucspi-unix/%{name}-%{version}.tar.gz
+# Source0-md5:	759407949912ccb860808ae2205e8a1a
 URL:		http://untroubled.org/ucspi-unix/
 BuildRequires:	bglibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

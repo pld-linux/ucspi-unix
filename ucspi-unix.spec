@@ -42,12 +42,10 @@ install -d $RPM_BUILD_ROOT
 
 %{__make} install_prefix=$RPM_BUILD_ROOT install
 
-gzip -9nf ChangeLog NEWS PROTOCOL README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog.gz NEWS.gz PROTOCOL.gz README.gz TODO.gz
+%doc ChangeLog NEWS PROTOCOL README TODO
 %attr(755,root,root) %{_bindir}/*

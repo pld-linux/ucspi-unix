@@ -7,8 +7,8 @@ License:	GPL
 Group:		Networking/Daemons
 Group(de):	Netzwerkwesen/Server
 Group(pl):	Sieciowe/Serwery
-Source0:	http://em.ca/~bruceg/ucspi-unix/%{version}/%{name}-%{version}.tar.gz
-URL:		http://em.ca/~bruceg/ucspi-unix/
+Source0:	http://untroubled.org/ucspi-unix/%{name}-%{version}.tar.gz
+URL:		http://untroubled.org/ucspi-unix/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

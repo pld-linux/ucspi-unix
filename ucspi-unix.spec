@@ -2,7 +2,7 @@ Summary:	UNIX-domain socket client-server command-line tools
 Summary(pl):	Klient i serwer command-line do gniazdek lokalnych
 Name:		ucspi-unix
 Version:	0.34
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Daemons
 Group(de):	Netzwerkwesen/Server

@@ -1,12 +1,13 @@
 Summary:	UNIX-domain socket client-server command-line tools
 Summary(pl):	Klient i serwer command-line do gniazdek lokalnych
 Name:		ucspi-unix
-Version:	0.34
-Release:	2
+Version:	0.36
+Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://untroubled.org/ucspi-unix/%{name}-%{version}.tar.gz
 URL:		http://untroubled.org/ucspi-unix/
+BuildRequires:	bglibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,18 +35,29 @@ Interface. Narzêdzia UCSPI s± dostêpne dla kilku ró¿nych sieci.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmcflags}"
+echo '%{__cc} %{rpmcflags} -Wall -I/usr/lib/bglibs/include' > conf-cc
+echo '%{__cc} %{rpmldflags} -L/usr/lib/bglibs/lib' > conf-ld
+echo '%{_bindir}' > conf-bin
+echo '%{_mandir}' > conf-man
+
+%{__make} programs
+
+echo "$RPM_BUILD_ROOT%{_bindir}" > conf-bin
+echo "$RPM_BUILD_ROOT%{_mandir}" > conf-man
+
+%{__make} installer
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}}
 
-%{__make} install_prefix=$RPM_BUILD_ROOT install
+./installer
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS PROTOCOL README TODO
+%doc NEWS PROTOCOL README TODO
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*

@@ -8,7 +8,7 @@ Group:		Networking/Daemons
 Source0:	http://untroubled.org/ucspi-unix/%{name}-%{version}.tar.gz
 # Source0-md5:	759407949912ccb860808ae2205e8a1a
 URL:		http://untroubled.org/ucspi-unix/
-BuildRequires:	bglibs
+BuildRequires:	bglibs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,8 +36,8 @@ Interface. Narzêdzia UCSPI s± dostêpne dla kilku ró¿nych sieci.
 %setup -q
 
 %build
-echo '%{__cc} %{rpmcflags} -Wall -I/usr/lib/bglibs/include' > conf-cc
-echo '%{__cc} %{rpmldflags} -L/usr/lib/bglibs/lib' > conf-ld
+echo '%{__cc} %{rpmcflags} -Wall -I%{_includedir}/bglibs' > conf-cc
+echo '%{__cc} %{rpmldflags} -L%{_libdir}/bglibs' > conf-ld
 echo '%{_bindir}' > conf-bin
 echo '%{_mandir}' > conf-man
 

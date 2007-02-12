@@ -1,5 +1,5 @@
 Summary:	UNIX-domain socket client-server command-line tools
-Summary(pl):	Klient i serwer command-line do gniazdek lokalnych
+Summary(pl.UTF-8):   Klient i serwer command-line do gniazdek lokalnych
 Name:		ucspi-unix
 Version:	0.36
 Release:	1
@@ -22,15 +22,15 @@ unixclient and unixserver conform to UCSPI, the UNIX Client-Server
 Program Interface, using UNIX domain sockets. UCSPI tools are
 available for several different networks.
 
-%description -l pl
-unixclient i unixserver to narzêdzia obs³ugiwane z linii poleceñ do
-tworzenia aplikacji klient-serwer u¿ywaj±cych gniazdek lokalnych (UNIX
-domain). unixclient ³±czy siê z gniazdkiem lokalnym i uruchamia podany
-program. unixserver tworzy gniazdko lokalne, czeka na przychodz±ce
-po³±czenia, i dla ka¿dego po³±czenia uruchamia podany program.
+%description -l pl.UTF-8
+unixclient i unixserver to narzÄ™dzia obsÅ‚ugiwane z linii poleceÅ„ do
+tworzenia aplikacji klient-serwer uÅ¼ywajÄ…cych gniazdek lokalnych (UNIX
+domain). unixclient Å‚Ä…czy siÄ™ z gniazdkiem lokalnym i uruchamia podany
+program. unixserver tworzy gniazdko lokalne, czeka na przychodzÄ…ce
+poÅ‚Ä…czenia, i dla kaÅ¼dego poÅ‚Ä…czenia uruchamia podany program.
 
-unixclient i unixserver s± zgodne z UCSPI - UNIX Client-Server Program
-Interface. Narzêdzia UCSPI s± dostêpne dla kilku ró¿nych sieci.
+unixclient i unixserver sÄ… zgodne z UCSPI - UNIX Client-Server Program
+Interface. NarzÄ™dzia UCSPI sÄ… dostÄ™pne dla kilku rÃ³Å¼nych sieci.
 
 %prep
 %setup -q

@@ -1,5 +1,5 @@
 Summary:	UNIX-domain socket client-server command-line tools
-Summary(pl.UTF-8):   Klient i serwer command-line do gniazdek lokalnych
+Summary(pl.UTF-8):	Klient i serwer command-line do gniazdek lokalnych
 Name:		ucspi-unix
 Version:	0.36
 Release:	1
